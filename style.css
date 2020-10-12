@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+  box-sizing: border-box;  
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(images/BulletinBoard.jpg) ;
+    background-size: cover;
+    font-family: 'Varela Round', sans-serif;
+}
+
+h1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 60px;
+    text-align: center;
+    margin: 1% auto;
+    float: none;
+    font-weight: bold;
+}
+
+.formContainer{
+    width: 95%;
+    height: 45vh;
+    float: none;
+    margin: 0 auto;
+    position: relative;
+}
+
+#form {
+    width: 700px;
+    height: 230px;
+    background-image: url(images/notebook.png);
+    background-repeat: no-repeat;
+    float: none;
+    margin: 0 auto;
+    position: relative;
+    background-size: contain;
+}
+
+#taskDetails {
+    width: 82%;
+    height: 63%;
+    background: none;
+    border: none;
+    top: 12%;
+    left: 12%;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 20px;
+    line-height: 29px;
+    position: absolute;
+    resize: none;
+}
+
+#formBottom{
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    padding-left: 12.5%;
+}
+
+#saveBtn {
+    margin-left: 10%;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+
+#container {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.taskArea {
+    width: 230px;
+    height: 230px;
+    background-image: url(images/note.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: ease-in 0.15s;
+    position: relative;
+    margin-right: 2%;
+    margin-bottom: 3%;
+    animation: fadeIn 0.8s;
+    display: flex;
+}
+
+.textArea {
+     overflow: auto;
+     width: 90%;
+     height: 70%;
+     margin-top: 10%;
+     padding: 10% 15% 10% 10%;
+     line-break: anywhere;
+}
+
+.spanDate {
+    position: absolute;
+    bottom: 3%;
+    left: 10%;
+}
+
+.glyphicon {
+    position: absolute;
+    left: 90%;
+    top: 5%;
+    visibility: hidden;
+}
+
+.taskArea:hover .glyphicon{
+    visibility: visible;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+@media screen and (max-width:700px){
+    #form {
+        width: 100%;
+        height: 85%;
+    }
+
+    #taskDetails {
+        position: relative;
+        top: 4vw;
+        left: 12%;
+        font-size: 3vw;
+        line-height: 3.8vw;
+        width: 85%;
+        height: 60%;
+    }
+
+    #formBottom{
+        width: 100%;
+        display: flex;
+        position: relative;
+        padding-left: 12%;
+    }
+
+    #saveBtn {
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width: 530px){
+    #formBottom{
+        width: 100%;
+        display: flex;
+        position: relative;
+        padding-left: 5%;
+        margin-top: 7%;
+    }
+
+    #container {
+        width: 100%;
+        padding-left: 15px;
+    }
+}
